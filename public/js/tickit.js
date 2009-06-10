@@ -32,6 +32,7 @@ function start() {
   timing = true;
   $('#toggle').attr('value', 'Stop');
   $('#log').attr('disabled', 'disabled');
+  $('#nav').hide();
   $('#current').css('color', '#ff0000');
   update();
   timer_handle = setTimeout(function() {
@@ -58,9 +59,9 @@ function log() {
     return false;
   }
   $.post('log', {"seconds":task_length}, function(data, textStatus) {
-    console.log(data.total_time);
     $('#current').css('color', '#000000').text(duration(data.total_time));
   }, 'json');
+  $('#nav').show();
   task_length = 0;
   return true;
 }
@@ -80,6 +81,19 @@ $(document).ready(function() {
   /* Reset the timer */
   $('#log').click(function() {
     log();
+  });
+
+  /* New project */
+  $('#new').click(function() {
+    var suppress = false;
+    if ($(this).attr('href') == undefined) {
+      suppress = true;
+    }
+    $(this).text('Really, New').attr('href', '/new');
+    setTimeout(function() {
+      $('#new').removeAttr('href').text('New');
+    }, 2000);
+    return !suppress;
   });
 
 });
