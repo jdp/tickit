@@ -1,0 +1,52 @@
+body {
+  font-family: 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+  margin-top: 1em;
+}
+
+h1 {
+  font-size: 400%;
+  font-weight: bold;
+  display: none;
+}
+
+a {
+  color: #999999;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
+}
+
+#wrapper {
+  width: 760px;
+  margin: auto;
+  text-align: center;
+}
+
+.clock {
+  font-size: 400%;
+  font-weight: bold;
+}
+
+#current {
+  margin-bottom: .25em;
+}
+
+#controlpanel {
+  margin-bottom: 1em;
+}
+
+#about, #credits {
+  font-size: 200%;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+
+.timer {
+  margin-bottom: 1em;
+}
+
+.timer h3 {
+  text-transform: uppercase;
+}

@@ -1,0 +1,12 @@
+!!! 1.1
+%html
+  %head
+    %title tickit
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => 'css/reset.css'}
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => 'css/tickit.css'}
+    %script{:type => 'text/javascript', :src => 'js/jquery.pack.js'}
+    %script{:type => 'text/javascript', :src => 'js/tickit.js'}
+  %body
+    #wrapper
+      %h1 tickit
+      = yield

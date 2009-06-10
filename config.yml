@@ -1,0 +1,14 @@
+---
+  environment: development
+  chdir: /home/justin/src/tickit
+  address: 127.0.0.1
+  user: root
+  group: root
+  port: 4567
+  pid: /home/justin/src/tickit/thin.pid
+  rackup: /home/justin/src/tickit/config.ru
+  log: /home/justin/src/tickit/thin.log
+  max_conns: 1024
+  timeout: 30
+  max_persistent_conns: 512
+  daemonize: false
