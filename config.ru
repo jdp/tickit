@@ -1,3 +1,3 @@
-import 'tickit'
+require 'tickit'
 
 run Sinatra::Application
